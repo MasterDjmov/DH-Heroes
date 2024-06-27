@@ -5,12 +5,12 @@ const app = express();
 
 //aviso a express que use los static, assets
 app.use(express.static('public'));
-
+const port = process.env.PORT || 3001;
 //escuchando el puerto
-app.listen(3000, (error)=>{
+app.listen(port, (error)=>{
     error?
         console.log("Error ",error.message):
-        console.log('Inicio del Servidor en http://localhost:3000');
+        console.log('Inicio del Servidor en http://localhost');
 })
 
 /**
